@@ -1,0 +1,52 @@
+body {
+    font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif, sans;
+    font-size: 8pt;
+    background-color: #666;
+}
+
+div.popup {
+    width: auto;
+    text-align: center;
+}
+
+div.popup h1.title {
+    color: white;
+}
+
+div.popup table tr.divider {
+    height: 20px;
+}
+
+div.popup input[type='button'] {
+    width: 60px;
+    height: 20px;
+    font-size: 8pt;
+    display: none;
+}
+
+div.popup input.buttonAction {
+    display: block
+}
+
+div.options {
+
+}
+
+div.options fieldset {
+    width: 300px;
+}
+
+div.options fieldset legend {
+    color: darkblue;
+    font-weight: bold;
+}
+
+div.options label {
+    padding-right: 10px;
+}
+
+div.options div#status {
+    padding-top: 20px;
+    color: darkred;
+    font-weight: bold;   
+}

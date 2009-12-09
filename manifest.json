@@ -1,0 +1,13 @@
+{
+  "name": "MediaRemote",
+  "version": "1.0",
+  "description": "Remote Control for HTTP/XML enabled Media Center HTPC applications such as XBMC.",
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "popup": "popup.html"
+  },
+  "permissions": [
+    "http://*/*"
+  ]
+}
