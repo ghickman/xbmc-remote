@@ -50,10 +50,32 @@ mr.init = {
         //alert('mr.init.events');
         $('.buttonAction').click(function () {
             var action = $(this).attr('id');
-            var action_code = mr_keymaps.xbmc.actions[action];
-            var command = 'Action(' + action_code + ')';
-            mr.ajax.sendRequest(command);
+            mr.ajax.doAction(action);
         });
+        $(document).bind('keydown', 'up', function () { mr.ajax.doAction('ACTION_MOVE_UP'); });
+        $(document).bind('keydown', 'down', function () { mr.ajax.doAction('ACTION_MOVE_DOWN'); });
+        $(document).bind('keydown', 'left', function () { mr.ajax.doAction('ACTION_MOVE_LEFT'); });
+        $(document).bind('keydown', 'right', function () { mr.ajax.doAction('ACTION_MOVE_RIGHT'); }); 
+        $(document).bind('keydown', 'return', function () { mr.ajax.doAction('ACTION_SELECT_ITEM'); });                                       
+        $(document).bind('keydown', '/', function () { mr.ajax.doAction('ACTION_PARENT_DIR'); }); 
+        $(document).bind('keydown', 'backspace', function () { mr.ajax.doAction('ACTION_PREVIOUS_MENU'); }); 
+        $(document).bind('keydown', '0', function () { mr.ajax.doAction('REMOTE_0'); });         
+        $(document).bind('keydown', '1', function () { mr.ajax.doAction('REMOTE_1'); });
+        $(document).bind('keydown', '2', function () { mr.ajax.doAction('REMOTE_2'); });
+        $(document).bind('keydown', '3', function () { mr.ajax.doAction('REMOTE_3'); });
+        $(document).bind('keydown', '4', function () { mr.ajax.doAction('REMOTE_4'); });
+        $(document).bind('keydown', '5', function () { mr.ajax.doAction('REMOTE_5'); });
+        $(document).bind('keydown', '6', function () { mr.ajax.doAction('REMOTE_6'); });
+        $(document).bind('keydown', '7', function () { mr.ajax.doAction('REMOTE_7'); });
+        $(document).bind('keydown', '8', function () { mr.ajax.doAction('REMOTE_8'); });
+        $(document).bind('keydown', '9', function () { mr.ajax.doAction('REMOTE_9'); });                                                                 
+        $(document).bind('keydown', 's', function () { mr.ajax.doAction('ACTION_STOP'); });        
+        $(document).bind('keydown', 'p', function () { mr.ajax.doAction('ACTION_PLAYER_PLAY'); });    
+        $(document).bind('keydown', 'h', function () { mr.ajax.doAction('ACTION_PAUSE'); });            
+        $(document).bind('keydown', '[', function () { mr.ajax.doAction('ACTION_PREV_ITEM'); }); 
+        $(document).bind('keydown', ']', function () { mr.ajax.doAction('ACTION_NEXT_ITEM'); }); 
+        $(document).bind('keydown', ',', function () { mr.ajax.doAction('ACTION_PLAYER_REWIND'); }); 
+        $(document).bind('keydown', '.', function () { mr.ajax.doAction('ACTION_PLAYER_FORWARD'); }); 
     },
     
     common: function () {
@@ -70,6 +92,16 @@ mr.init = {
     options: function () {
         //alert('mr.init.options');
         mr.init.common();
+    }
+
+};
+
+// Utils
+
+mr.utils = {
+
+    getActionCode: function(ref) {
+        return mr_keymaps.xbmc.actions[ref];
     }
 
 };
@@ -99,6 +131,12 @@ mr.ajax = {
         var url = mr.ajax.buildUrl();
         var callUrl = url + command;
         $.get(callUrl, function(data) {});
+    },
+    
+    doAction: function (action) {
+        //alert('mr.ajax.doAction');
+        var command = 'Action(' + mr.utils.getActionCode(action) + ')';
+        mr.ajax.sendRequest(command);        
     }
 
 };
