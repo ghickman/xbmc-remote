@@ -2,7 +2,8 @@
 <head>
     <title>MediaRemote</title>
     <link href="style.css" rel="stylesheet" />
-    <script type="text/javascript" src="jquery.js"></script>     
+    <script src="jquery.js" type="text/javascript" ></script>     
+    <script src="keymaps.js" type="text/javascript"></script>
     <script src="functions.js" type="text/javascript"></script>
 </head>
 <body>
@@ -16,81 +17,81 @@
         <table>
             <tbody>
                 <tr>
-                    <td><input id="previous" type="button" value="|&lt;" class="buttonAction" /></td>
-                    <td><input id="rewind" type="button" value="&lt;&lt;" class="buttonAction" /></td>
-                    <td><input id="play" type="button" value="&gt;" class="buttonAction" /></td>
-                    <td><input id="ffwd" type="button" value="&gt;&gt;" class="buttonAction" /></td>                                        
-                    <td><input id="next" type="button" value="&gt;|" class="buttonAction" /></td>                    
+                    <td><input id="ACTION_PREV_ITEM" type="button" value="|&lt;" class="buttonAction" /></td>
+                    <td><input id="ACTION_PLAYER_REWIND" type="button" value="&lt;&lt;" class="buttonAction" /></td>
+                    <td><input id="ACTION_PLAYER_PLAY" type="button" value="&gt;" class="buttonAction" /></td>
+                    <td><input id="ACTION_PLAYER_FORWARD" type="button" value="&gt;&gt;" class="buttonAction" /></td>                                        
+                    <td><input id="ACTION_NEXT_ITEM" type="button" value="&gt;|" class="buttonAction" /></td>                    
                 </tr>
                 <tr>
-                    <td><input id="step-back-small" type="button" value="&lt; 1%" class="buttonAction" /></td>
-                    <td><input id="stop" type="button" value="[&nbsp;]" class="buttonAction" /></td>
+                    <td><input id="ACTION_STEP_BACK" type="button" value="&lt; 1%" class="buttonAction" /></td>
+                    <td><input id="ACTION_STOP" type="button" value="[&nbsp;]" class="buttonAction" /></td>
                     <td></td>
-                    <td><input id="pause" type="button" value="|&nbsp;|" class="buttonAction" /></td>                                        
-                    <td><input id="step-forward-small" type="button" value="1% &gt;" class="buttonAction" /></td>                    
+                    <td><input id="ACTION_PAUSE" type="button" value="|&nbsp;|" class="buttonAction" /></td>                                        
+                    <td><input id="ACTION_STEP_FORWARD" type="button" value="1% &gt;" class="buttonAction" /></td>                    
                 </tr>
                 <tr class="divider">
                     <td colspan="5"></td>
                 </tr>
                 <tr>
-                    <td><input id="toggle-gui" type="button" value="Menu" class="buttonAction" /></td>
-                    <td><input id="parent-dir" type="button" value="Parent" class="buttonAction" /></td>                    
+                    <td><input id="ACTION_SHOW_GUI" type="button" value="Menu" class="buttonAction" /></td>
+                    <td><input id="ACTION_PARENT_DIR" type="button" value="Parent" class="buttonAction" /></td>                    
                     <td></td>
                     <td></td>  
-                    <td><input id="previous-menu" type="button" value="Back" class="buttonAction" /></td>                                                                       
+                    <td><input id="ACTION_PREVIOUS_MENU" type="button" value="Back" class="buttonAction" /></td>                                                                       
                 </tr>
                 <tr class="divider">
                     <td colspan="5"></td>
                 </tr>                
                 <tr>
-                    <td><input id="volume-up" type="button" value="Vol +" class="buttonAction" /></td>
+                    <td><input id="ACTION_VOLUME_UP" type="button" value="Vol +" class="buttonAction" /></td>
                     <td></td>
-                    <td><input id="dpad-up" type="button" value="/\" class="buttonAction" /></td>                                        
+                    <td><input id="ACTION_MOVE_UP" type="button" value="/\" class="buttonAction" /></td>                                        
                     <td></td>              
-                    <td><input id="page-up" type="button" value="Pg Up" class="buttonAction" /></td>                    
+                    <td><input id="ACTION_PAGE_UP" type="button" value="Pg Up" class="buttonAction" /></td>                    
                 </tr>                
                 <tr>
                     <td></td>
-                    <td><input id="dpad-left" type="button" value="&lt;" class="buttonAction" /></td>
-                    <td><input id="select" type="button" value="OK" class="buttonAction" /></td>                                                       
-                    <td><input id="dpad-right" type="button" value="&gt;" class="buttonAction" /></td>                    
+                    <td><input id="ACTION_MOVE_LEFT" type="button" value="&lt;" class="buttonAction" /></td>
+                    <td><input id="ACTION_SELECT_ITEM" type="button" value="OK" class="buttonAction" /></td>                                                       
+                    <td><input id="ACTION_MOVE_RIGHT" type="button" value="&gt;" class="buttonAction" /></td>                    
                     <td></td>
                 </tr>
                 <tr>
-                    <td><input id="volume-down" type="button" value="Vol -" class="buttonAction" /></td>
+                    <td><input id="ACTION_VOLUME_DOWN" type="button" value="Vol -" class="buttonAction" /></td>
                     <td></td>                      
-                    <td><input id="dpad-down" type="button" value="\/" class="buttonAction" /></td>                                        
+                    <td><input id="ACTION_MOVE_DOWN" type="button" value="\/" class="buttonAction" /></td>                                        
                     <td></td>
-                    <td><input id="page-down" type="button" value="Pg Dn" class="buttonAction" /></td>                    
+                    <td><input id="ACTION_PAGE_DOWN" type="button" value="Pg Dn" class="buttonAction" /></td>                    
                 </tr>      
                 <tr class="divider">
                     <td colspan="5"></td>
                 </tr>                
                 <tr>
                     <td></td>        
-                    <td><input id="keypad-1" type="button" value="1" class="buttonAction" /></td>              
-                    <td><input id="keypad-2" type="button" value="2" class="buttonAction" /></td>                                        
-                    <td><input id="keypad-3" type="button" value="3" class="buttonAction" /></td>                    
+                    <td><input id="REMOTE_1" type="button" value="1" class="buttonAction" /></td>              
+                    <td><input id="REMOTE_2" type="button" value="2" class="buttonAction" /></td>                                        
+                    <td><input id="REMOTE_3" type="button" value="3" class="buttonAction" /></td>                    
                     <td></td>                    
                 </tr>  
                 <tr>
                     <td></td>        
-                    <td><input id="keypad-4" type="button" value="4" class="buttonAction" /></td>              
-                    <td><input id="keypad-5" type="button" value="5" class="buttonAction" /></td>                                        
-                    <td><input id="keypad-6" type="button" value="6" class="buttonAction" /></td>                                        
+                    <td><input id="REMOTE_4" type="button" value="4" class="buttonAction" /></td>              
+                    <td><input id="REMOTE_5" type="button" value="5" class="buttonAction" /></td>                                        
+                    <td><input id="REMOTE_6" type="button" value="6" class="buttonAction" /></td>                                        
                     <td></td>                    
                 </tr>  
                 <tr>
                     <td></td>        
-                    <td><input id="keypad-7" type="button" value="7" class="buttonAction" /></td>              
-                    <td><input id="keypad-8" type="button" value="8" class="buttonAction" /></td>                                        
-                    <td><input id="keypad-9" type="button" value="9" class="buttonAction" /></td>                    
+                    <td><input id="REMOTE_7" type="button" value="7" class="buttonAction" /></td>              
+                    <td><input id="REMOTE_8" type="button" value="8" class="buttonAction" /></td>                                        
+                    <td><input id="REMOTE_9" type="button" value="9" class="buttonAction" /></td>                    
                     <td></td>                    
                 </tr>                
                 <tr>
                     <td></td>        
                     <td></td>              
-                    <td><input id="keypad-0" type="button" value="0" class="buttonAction" /></td>                                        
+                    <td><input id="REMOTE_0" type="button" value="0" class="buttonAction" /></td>                                        
                     <td></td>                    
                     <td></td>                    
                 </tr>                    

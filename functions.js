@@ -50,42 +50,8 @@ mr.init = {
         //alert('mr.init.events');
         $('.buttonAction').click(function () {
             var action = $(this).attr('id');
-            var command = action;
-            if(action == "dpad-left") { command = "Action(1)"; } 
-            if(action == "dpad-right") { command = "Action(2)"; } 
-            if(action == "dpad-up") { command = "Action(3)"; } 
-            if(action == "dpad-down") { command = "Action(4)"; } 
-            if(action == "page-up") { command = "Action(5)"; } 
-            if(action == "page-down") { command = "Action(6)"; }             
-            if(action == "select") { command = "Action(7)"; }      
-            if(action == "parent-dir") { command = "Action(9)"; } 
-            if(action == "previous-menu") { command = "Action(10)"; } 
-            if(action == "show-info") { command = "Action(11)"; } 
-            if(action == "toggle-gui") { command = "Action(18)"; } 
-
-            if(action == "step-back-small") { command = "Action(21)"; } 
-            if(action == "step-forward-small") { command = "Action(20)"; }   
-            if(action == "rewind") { command = "Action(78)"; } 
-            if(action == "ffwd") { command = "Action(77)"; }                         
-            if(action == "previous") { command = "Action(15)"; }
-            if(action == "next") { command = "Action(14)"; }
-            if(action == "stop") { command = "Action(13)"; }
-            if(action == "play") { command = "Action(79)"; }
-            if(action == "pause") { command = "Action(12)"; }
-            if(action == "mute") { command = "Action(91)"; }
-            if(action == "volume-up") { command = "Action(88)"; }                                   
-            if(action == "volume-down") { command ="Action(89)"; }
-            if(action == "keypad-0") { command ="Action(58)"; }
-            if(action == "keypad-1") { command ="Action(59)"; }
-            if(action == "keypad-2") { command ="Action(60)"; }
-            if(action == "keypad-3") { command ="Action(61)"; }
-            if(action == "keypad-4") { command ="Action(62)"; }
-            if(action == "keypad-5") { command ="Action(63)"; }
-            if(action == "keypad-6") { command ="Action(64)"; }
-            if(action == "keypad-7") { command ="Action(65)"; }
-            if(action == "keypad-8") { command ="Action(66)"; }
-            if(action == "keypad-9") { command ="Action(67)"; }                                                                                                
-                        
+            var action_code = mr_keymaps.xbmc.actions[action];
+            var command = 'Action(' + action_code + ')';
             mr.ajax.sendRequest(command);
         });
     },
