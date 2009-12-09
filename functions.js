@@ -82,8 +82,13 @@ mr.ajax = {
         //alert('mr.ajax.buildUrl');
         var host = mr.storage.get('server_host');
         var port = mr.storage.get('server_port');
+        var username = mr.storage.get('server_username', '');
+        var password = mr.storage.get('server_password', '');
         var url = '';
-        url = url + 'http://xbmc:xbmc@';
+        url = url + 'http://';
+        if(username != '') { url = url + username; }
+        if(password != '') { url = url + ':' + password; }
+        if(username != '') { url = url + '@'; }
         url = url + host + ':' + port + '/';
         url = url + 'xbmcCmds/xbmcHttp?command=';
         return url;
