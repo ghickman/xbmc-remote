@@ -11,6 +11,7 @@ div.popup {
 
 div.popup h1.title {
     color: white;
+    text-shadow: 2px 2px 2px black;   
 }
 
 div.popup table tr.divider {
@@ -18,14 +19,31 @@ div.popup table tr.divider {
 }
 
 div.popup input[type='button'] {
-    width: 60px;
-    height: 20px;
+    width: 40px;
+    height: 25px;
     font-size: 8pt;
+    background-color: black;
+    color: white;
+    font-weight: bold;
     display: none;
+    border: 3px solid silver;
+    padding: 0;
+    -webkit-border-radius: 6px;
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 div.popup input.buttonAction {
     display: block
+}
+
+div.popup div#status {
+    background-color: white;
+    padding: 3px;
+    font-size: 8pt;
+    font-weight: bold;
+    text-align: center;
+    border: 1px dashed silver;
+    height: 15px;
 }
 
 div.options {
