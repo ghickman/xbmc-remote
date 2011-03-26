@@ -1,6 +1,6 @@
 {
   "name": "MediaRemote",
-  "version": "1.31",
+  "version": "1.32",
   "description": "Remote Control for HTTP/XML enabled Media Center HTPC applications such as XBMC.",
   "options_page": "options.html",
   "browser_action": {

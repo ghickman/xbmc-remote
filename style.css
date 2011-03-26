@@ -1,7 +1,14 @@
 body {
     font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif, sans;
     font-size: 8pt;
-    background-color: #666;
+}
+
+body#popup {
+    background-color: #666;	
+}
+
+body#options {
+
 }
 
 div.popup {
@@ -51,7 +58,7 @@ div.options {
 }
 
 div.options fieldset {
-    width: 300px;
+    width: 500px;
 }
 
 div.options fieldset legend {
@@ -60,7 +67,9 @@ div.options fieldset legend {
 }
 
 div.options label {
+	width: 150px;
     padding-right: 10px;
+    float: left;
 }
 
 div.options div#status {

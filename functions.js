@@ -129,7 +129,7 @@ mr.init = {
     
         //alert('mr.init.options');
     
-        mr.init.common();
+        mr.init.loadConfig();
     
     }
 
