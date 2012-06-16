@@ -2,15 +2,15 @@
 <head>
     <title>MediaRemote Options</title>
     <link href="style.css" rel="stylesheet" />
-    <script type="text/javascript" src="jquery.js"></script>    
-    <script type="text/javascript" src="keymaps.js"></script>  
-    <script type="text/javascript" src="functions.js"></script>    
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="keymaps.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
     <script type="text/javascript">
         function save_options() {
             mr.storage.set('server_host', $('#server_host').val());
             mr.storage.set('server_port', $('#server_port').val());
             mr.storage.set('server_username', $('#server_username').val());
-            mr.storage.set('server_password', $('#server_password').val());            
+            mr.storage.set('server_password', $('#server_password').val());
             var status = document.getElementById("status");
             $('#status').text("Options have been saved.");
         }
@@ -20,9 +20,9 @@
     <script type="text/javascript">
         $(document).ready(function () {
             mr.init.options();
-            $('#server_host').val(mr.storage.get('server_host'));            
+            $('#server_host').val(mr.storage.get('server_host'));
             $('#server_port').val(mr.storage.get('server_port'));
-            $('#server_username').val(mr.storage.get('server_username'));            
+            $('#server_username').val(mr.storage.get('server_username'));
             $('#server_password').val(mr.storage.get('server_password'));
         });
     </script>

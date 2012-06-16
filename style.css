@@ -4,7 +4,7 @@ body {
 }
 
 body#popup {
-    background-color: #666;	
+    background-color: #666;
 }
 
 body#options {
@@ -18,7 +18,7 @@ div.popup {
 
 div.popup h1.title {
     color: white;
-    text-shadow: 2px 2px 2px black;   
+    text-shadow: 2px 2px 2px black;
 }
 
 div.popup table tr.divider {
@@ -67,7 +67,7 @@ div.options fieldset legend {
 }
 
 div.options label {
-	width: 150px;
+    width: 150px;
     padding-right: 10px;
     float: left;
 }
@@ -75,5 +75,5 @@ div.options label {
 div.options div#status {
     padding-top: 20px;
     color: darkred;
-    font-weight: bold;   
+    font-weight: bold;
 }
