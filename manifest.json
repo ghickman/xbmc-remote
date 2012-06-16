@@ -1,5 +1,5 @@
 {
-  "name": "XBMCRemote",
+  "name": "XBMC Remote",
   "version": "0.1",
   "description": "Remote Control for XBMC",
   "options_page": "options.html",
