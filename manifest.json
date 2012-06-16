@@ -1,6 +1,6 @@
 {
   "name": "XBMCRemote",
-  "version": "1.32",
+  "version": "0.1",
   "description": "Remote Control for XBMC",
   "options_page": "options.html",
   "browser_action": {
